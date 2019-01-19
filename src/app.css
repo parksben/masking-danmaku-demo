@@ -1,0 +1,27 @@
+html,
+body {
+  font: 14px/18px Helvetica, Arial, 'Microsoft Yahei', Verdana, sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #eee;
+  overflow: hidden;
+}
+
+#container,
+#video {
+  width: 880px;
+  height: 540px;
+}
+
+#container {
+  margin: 0 auto;
+  margin-top: 50vh;
+  margin-left: 50vw;
+  transform: translate(-50%, -50%);
+  background-color: #ddd;
+}
+
+#video::-webkit-media-controls-fullscreen-button {
+  display: none;
+}

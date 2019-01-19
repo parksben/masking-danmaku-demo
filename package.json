@@ -1,0 +1,29 @@
+{
+  "name": "masking-danmaku-demo",
+  "description": "A real-time masking danmaku example based on chroma key technology.",
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "6.26.0",
+    "css-loader": "^1.0.0",
+    "serve": "^10.0.2",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "scripts": {
+    "dev": "npx webpack-dev-server --host localhost --port 9000 --inline true --hot true",
+    "build": "npx webpack",
+    "serve": "yarn build && npx serve -s ./public -p 9999",
+    "upgrade-barrage": "yarn remove barrage-ui && yarn add barrage-ui"
+  },
+  "dependencies": {
+    "barrage-ui": "^1.0.9"
+  }
+}
