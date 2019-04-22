@@ -8,9 +8,7 @@ const container = document.getElementById('container');
 // 创建弹幕实例
 const barrage = new Barrage({
   container: container,
-  config: {
-    overlapOptimized: true,
-  },
+  overlapOptimized: true,
 });
 
 // 重置画布高度，避免弹幕遮挡视频播放控件
