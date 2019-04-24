@@ -4,6 +4,12 @@ A real-time masking danmaku example based on chroma key technology.
 
 基于色键技术的实时蒙版弹幕实例
 
+## Overview
+
+You can click this link to see the effect of this project running online.
+
+<https://masking-danmaku-demo.netlify.com/>
+
 ## Startup & View
 
 1. Clone this repository to your local directory.
