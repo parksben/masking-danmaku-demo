@@ -8,7 +8,6 @@ const container = document.getElementById('container');
 // 创建弹幕实例
 const barrage = new Barrage({
   container: container,
-  overlapOptimized: true,
 });
 
 // 重置画布高度，避免弹幕遮挡视频播放控件
@@ -80,3 +79,39 @@ video.addEventListener(
   },
   false
 );
+
+// 点击按钮发送弹幕
+document.getElementById('danmaku_submit').onclick = e => {
+  if (window.event) {
+    window.event.cancelBubble = true;
+  } else {
+    e.stopPropagation();
+  }
+
+  const danmakuIpt = document.getElementById('danmaku_input');
+  const msgBox = document.getElementById('msg_box');
+
+  if (danmakuIpt.value.trim()) {
+    const result = barrage.add({
+      time: video.currentTime * 1000,
+      text: danmakuIpt.value,
+    });
+
+    if (result) {
+      // 弹幕插入成功
+      danmakuIpt.value = '';
+      msgBox.style.color = 'green';
+      msgBox.innerText = '弹幕插入成功！';
+      setTimeout(() => {
+        msgBox.innerText = '';
+      }, 2000);
+    } else {
+      // 弹幕插入失败
+      msgBox.style.color = 'red';
+      msgBox.innerText = '当前进度弹幕过于饱和，请择机再试 ~(o_o)~';
+      setTimeout(() => {
+        msgBox.innerText = '';
+      }, 2000);
+    }
+  }
+};

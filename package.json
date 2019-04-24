@@ -24,6 +24,6 @@
     "upgrade-barrage": "yarn remove barrage-ui && yarn add barrage-ui"
   },
   "dependencies": {
-    "barrage-ui": "^1.0.9"
+    "barrage-ui": "^1.1.0"
   }
 }

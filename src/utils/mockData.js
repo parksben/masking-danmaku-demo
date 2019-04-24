@@ -18,9 +18,9 @@ const randomText = () =>
 
 const createdStart = Date.now();
 
-const database = new Array(5000).fill(null).map((d, i) => ({
+const database = new Array(500).fill(null).map((d, i) => ({
   key: randomKey(),
-  time: 200 * (i + Math.random()),
+  time: 500 * (i + Math.random()),
   text: randomText(),
   color: randomColor(),
   createdAt: createdStart + Math.random() * 24 * 3600 * 1000,

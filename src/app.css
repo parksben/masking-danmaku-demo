@@ -5,7 +5,6 @@ body {
   margin: 0;
   padding: 0;
   background: #eee;
-  overflow: hidden;
 }
 
 #container,
@@ -16,12 +15,74 @@ body {
 
 #container {
   margin: 0 auto;
-  margin-top: 50vh;
-  margin-left: 50vw;
-  transform: translate(-50%, -50%);
+  margin-top: 32px;
   background-color: #ddd;
 }
 
 #video::-webkit-media-controls-fullscreen-button {
   display: none;
+}
+
+.danmaku-editor {
+  width: 880px;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+
+.danmaku-editor > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.danmaku-editor::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+#danmaku_input {
+  float: left;
+  box-sizing: border-box;
+  width: calc(100% - 136px);
+  padding: 8px 16px;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #999;
+  border: 1px solid #999;
+  border-radius: 5px;
+  background: transparent;
+  transition: background 0.1s ease-in;
+  outline: none;
+}
+
+#danmaku_input:focus {
+  color: #333;
+  border-color: #333;
+  background: #fff;
+}
+
+#danmaku_submit {
+  float: right;
+  width: 120px;
+  height: 45px;
+  background: #3dab85;
+  transition: background 0.1s ease-in;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#danmaku_submit:active {
+  background: #1b8963;
+}
+
+#msg_box {
+  width: 880px;
+  margin: 0 auto;
+  margin-top: 16px;
+  padding: 0 8px;
+  box-sizing: border-box;
 }
