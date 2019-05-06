@@ -29,7 +29,7 @@
 
 下面是基于 Barrage UI 组件实现的蒙版弹幕效果：
 
-![色键蒙版效果](https://github.com/parksben/barrage/raw/master/images/barrage.gif)
+![色键蒙版效果](https://github.com/parksben/barrage/blob/master/docs/images/barrage.gif?raw=true)
 
 由于文中不方便嵌入视频，Demo 的实际效果请移步到 [此处](https://parksben.github.io/masking-danmaku-demo) 查看。
 
