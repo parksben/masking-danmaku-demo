@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>蒙版弹幕效果</title>
+    <link href='/style.css' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
@@ -12,6 +13,16 @@
       <video id="video" src="videos/demo.mp4" controls></video>
     </div>
     <div class="danmaku-editor">
+      <img id="avatar-result" src="/images/avatar-none.svg" data-empty="/images/avatar-none.svg" alt="avatar-none" title="选择头像">
+      <div id="avatar-selector">
+        <img src="/images/avatar-01.svg" src="avatar-01">
+        <img src="/images/avatar-02.svg" src="avatar-02">
+        <img src="/images/avatar-03.svg" src="avatar-03">
+        <img src="/images/avatar-04.svg" src="avatar-04">
+        <img src="/images/avatar-05.svg" src="avatar-05">
+        <img src="/images/avatar-06.svg" src="avatar-06">
+        <span>None</span>
+      </div>
       <input type="text" id="danmaku_input" placeholder="填写弹幕内容...">
       <button id="danmaku_submit">发送弹幕</button>
     </div>

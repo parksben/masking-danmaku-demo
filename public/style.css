@@ -27,6 +27,7 @@ body {
   width: 880px;
   margin: 0 auto;
   margin-top: 16px;
+  position: relative;
 }
 
 .danmaku-editor > * {
@@ -45,6 +46,7 @@ body {
   box-sizing: border-box;
   width: calc(100% - 136px);
   padding: 8px 16px;
+  padding-left: 52px;
   font-size: 18px;
   line-height: 1.5;
   color: #999;
@@ -86,3 +88,69 @@ body {
   padding: 0 8px;
   box-sizing: border-box;
 }
+
+/* 选择头像 */
+#avatar-result {
+  position: absolute;
+  left: 12px;
+  top: 7px;
+  width: 22px;
+  padding: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 0 0 rgba(50, 120, 6, 0.363);
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+#avatar-result.expanded {
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 0 0 2px rgba(50, 120, 6, 0.363);
+}
+
+#avatar-selector {
+  opacity: 0;
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  width: 270px;
+  height: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  margin: 0;
+  background: #fff;
+}
+
+#avatar-selector.show {
+  opacity: 1;
+  height: 140px;
+}
+
+#avatar-selector img,
+#avatar-selector span {
+  width: 35px;
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 200ms ease-in-out;
+  border-radius: 3px;
+  float: left;
+  cursor: pointer;
+}
+
+#avatar-selector span {
+  display: block;
+  font-size: 10px;
+  line-height: 35px;
+  color: #999;
+  text-align: center;
+}
+
+#avatar-selector img:hover,
+#avatar-selector span:hover {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+/* 选择头像 */

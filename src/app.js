@@ -1,6 +1,5 @@
 import Barrage from 'barrage-ui';
 import data from 'utils/mockData';
-import './app.css';
 
 // 父级容器
 const container = document.getElementById('container');
@@ -95,6 +94,7 @@ document.getElementById('danmaku_submit').onclick = e => {
     const result = barrage.add({
       time: video.currentTime * 1000,
       text: danmakuIpt.value,
+      avatar: document.getElementById('avatar-result').dataset.url,
     });
 
     if (result) {
@@ -115,3 +115,40 @@ document.getElementById('danmaku_submit').onclick = e => {
     }
   }
 };
+
+// 显示/隐藏头像面板
+document.getElementById('avatar-result').addEventListener(
+  'click',
+  function(e) {
+    const avatarSelector = document.getElementById('avatar-selector');
+
+    if (e.target.className === 'expanded') {
+      e.target.className = '';
+      avatarSelector.className = '';
+    } else {
+      e.target.className = 'expanded';
+      avatarSelector.className = 'show';
+    }
+  },
+  false
+);
+
+// 选择头像
+document.getElementById('avatar-selector').addEventListener(
+  'click',
+  function(e) {
+    const avatarResultNode = document.getElementById('avatar-result');
+
+    if (e.target.tagName.toLowerCase() === 'img') {
+      avatarResultNode.src = e.target.src;
+      avatarResultNode.dataset.url = e.target.src;
+    } else {
+      avatarResultNode.src = avatarResultNode.dataset.empty;
+      avatarResultNode.dataset.url = '';
+    }
+
+    avatarResultNode.className = '';
+    document.getElementById('avatar-selector').className = '';
+  },
+  false
+);
