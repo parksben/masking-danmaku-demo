@@ -15,7 +15,7 @@
     "style-loader": "^0.23.0",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.11"
   },
   "scripts": {
     "dev": "npx webpack-dev-server --host localhost --port 9000 --inline true --hot true",
